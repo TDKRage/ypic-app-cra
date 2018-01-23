@@ -36,6 +36,9 @@
       "BUTTON",
       "APP_BAR"
     ],
+    "customProperties": {
+      "color-primary-dark": "#217ab8"
+    },
     "output": "src/assets/react-toolbox"
   }
 }
