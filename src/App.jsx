@@ -3,6 +3,9 @@ import {
   BrowserRouter,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
+
+import 'normalize.css';
+
 import { ConnectedRouter } from 'react-router-redux';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import theme from './assets/react-toolbox/theme';
