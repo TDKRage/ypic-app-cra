@@ -15,8 +15,8 @@ const Main = () => (
   <div className="site-main">
     <AppBar title="Young People in Christ" />
     <div className="site-main__body">
-      <Route path="/" component={Home} exact />
-      <Route path="/login" component={Login} />
+      <Route path="/home" component={Home} exact />
+      <Route path="/" component={Login} />
     </div>
   </div>
 );
