@@ -11,6 +11,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "next",
     "react-scripts": "1.1.0",
+    "react-toolbox": "^2.0.0-beta.12",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   },
@@ -18,13 +19,21 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "toolbox": "react-toolbox-themr"
   },
   "devDependencies": {
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1"
+    "eslint-plugin-react": "^7.5.1",
+    "react-toolbox-themr": "^1.0.2"
+  },
+  "reactToolbox": {
+    "include": [
+      "BUTTON"
+    ],
+    "output": "src/assets/react-toolbox"
   }
 }
