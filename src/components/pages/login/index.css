@@ -52,6 +52,6 @@ button.social-button--google {
   text-align: center;
 }
 
-.sign-up__link {
-  padding: 1rem 0;
+.login-form {
+  padding-bottom: 1rem;
 }

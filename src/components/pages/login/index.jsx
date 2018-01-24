@@ -20,7 +20,7 @@ const Login = () => (
         <Button className="social-button--google">Google</Button>
       </div>
       <div className="login-box__email-row">
-        <LoginForm className="sign-up__link" />
+        <LoginForm className="login-form" />
         <Link to="/home"> Sign up with email address </Link>
       </div>
     </div>
