@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import Button from 'react-toolbox/lib/button/Button';
 
@@ -21,9 +22,18 @@ const LoginForm = ({ handleSubmit, className }) => (
       label="Password"
       component={InputField}
     />
-    <Button raised primary>Sign In</Button>
+    <Button raised primary type="submit">Sign In</Button>
   </form>
 );
+
+LoginForm.defaultProps = {
+  className: '',
+};
+
+LoginForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  className: PropTypes.string,
+};
 
 export default reduxForm({
   form: loginForm,

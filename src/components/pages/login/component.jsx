@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Button from 'react-toolbox/lib/button/Button';
 
@@ -7,7 +8,7 @@ import Logo from '../../../assets/images/ypic_logo_small.png';
 
 import './index.css';
 
-const Login = () => (
+const Login = ({ onLogin }) => (
   <div className="login-page">
     <div className="login-box">
       <div className="login-box__header-row">
@@ -20,11 +21,15 @@ const Login = () => (
         <Button className="social-button--google">Google</Button>
       </div>
       <div className="login-box__email-row">
-        <LoginForm className="login-form" />
+        <LoginForm onSubmit={onLogin} className="login-form" />
         <Link to="/home"> Sign up with email address </Link>
       </div>
     </div>
   </div>
 );
+
+Login.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+};
 
 export default Login;
