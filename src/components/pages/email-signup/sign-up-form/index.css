@@ -1,0 +1,4 @@
+.signup-form__button-bar { 
+  display: flex; 
+  justify-content: space-around;
+}
