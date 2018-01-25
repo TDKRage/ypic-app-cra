@@ -55,3 +55,7 @@ button.social-button--google {
 .login-form {
   padding-bottom: 1rem;
 }
+
+.login-form__button-row {
+  padding-top: 1rem;
+}

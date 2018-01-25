@@ -5,8 +5,8 @@ import Button from 'react-toolbox/lib/button/Button';
 
 import InputField from '../../../shared/input-field';
 
-
 import { loginForm } from '../../../../utils/formNames';
+import { email, required } from '../../../../utils/validatation';
 
 const LoginForm = ({ handleSubmit, className }) => (
   <form className={className} onSubmit={handleSubmit}>
@@ -15,14 +15,18 @@ const LoginForm = ({ handleSubmit, className }) => (
       name="email"
       label="Email"
       component={InputField}
+      validate={[email, required]}
     />
     <Field
       type="password"
       name="password"
       label="Password"
       component={InputField}
+      validate={[required]}
     />
-    <Button raised primary type="submit">Sign In</Button>
+    <div className="login-form__button-row">
+      <Button raised primary type="submit">Sign In</Button>
+    </div>
   </form>
 );
 
