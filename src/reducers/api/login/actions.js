@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-export const loginUserEmailAsync = ({email, password}) => async (dispatch) => {
+export const loginUserEmailAsync = ({email, password, rememberMe}) => async (dispatch) => {
   try {
     const loginResponse = await window.firebase.auth().signInWithEmailAndPassword(email, password);
     console.log(loginResponse);

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { loginUserEmailAsync } from '../../../reducers/api/login/actions'
+import { loginUserEmailAsync } from '../../../reducers/api/login/actions';
 import Component from './component';
 
 const handleOnLogin = dispatch => (values) => {

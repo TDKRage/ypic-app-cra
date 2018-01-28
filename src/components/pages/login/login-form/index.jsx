@@ -4,6 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import Button from 'react-toolbox/lib/button/Button';
 
 import InputField from '../../../shared/input-field';
+import CheckboxField from '../../../shared/checkbox-field';
 
 import { loginForm } from '../../../../utils/formNames';
 import { email, required } from '../../../../utils/validatation';
@@ -25,6 +26,11 @@ const LoginForm = ({ handleSubmit, className }) => (
       validate={[required]}
     />
     <div className="login-form__button-row">
+      <Field
+        name="rememberMe"
+        component={CheckboxField}
+        label="Remember Me"
+      />
       <Button raised primary type="submit">Sign In</Button>
     </div>
   </form>

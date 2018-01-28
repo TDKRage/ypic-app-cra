@@ -39,7 +39,8 @@
     "include": [
       "BUTTON",
       "APP_BAR",
-      "INPUT"
+      "INPUT",
+      "CHECKBOX"
     ],
     "customProperties": {
       "color-primary-dark": "#217ab8"
