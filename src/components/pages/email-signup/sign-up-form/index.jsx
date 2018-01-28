@@ -11,8 +11,8 @@ import { signUpFrom } from '../../../../utils/formNames';
 
 import './index.css';
 
-const SignUpForm = ({ handleSumbit, className }) => (
-  <form onSubmit={handleSumbit} className={className}>
+const SignUpForm = ({ handleSubmit, className }) => (
+  <form onSubmit={handleSubmit} className={className}>
     <Field
       type="text"
       name="email"
@@ -46,7 +46,7 @@ SignUpForm.defaultProps = {
 };
 
 SignUpForm.propTypes = {
-  handleSumbit: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
   className: PropTypes.string,
 };
 
