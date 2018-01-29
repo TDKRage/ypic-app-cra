@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Button from 'react-toolbox/lib/button/Button';
 
 import LoginBox from '../../shared/login-box';
+import { EMAIL_SIGNUP } from '../../../urls';
+
 import LoginForm from './login-form';
 
 import './index.css';
@@ -18,7 +20,7 @@ const Login = ({ onLogin }) => (
       </div>
       <div className="login-box__email-row">
         <LoginForm onSubmit={onLogin} className="login-form" />
-        <Link to="/email-signup"> Sign up with email address </Link>
+        <Link to={EMAIL_SIGNUP}> Sign up with email address </Link>
       </div>
     </LoginBox>
   </div>

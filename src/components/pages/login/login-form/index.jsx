@@ -26,11 +26,6 @@ const LoginForm = ({ handleSubmit, className }) => (
       validate={[required]}
     />
     <div className="login-form__button-row">
-      <Field
-        name="rememberMe"
-        component={CheckboxField}
-        label="Remember Me"
-      />
       <Button raised primary type="submit">Sign In</Button>
     </div>
   </form>
