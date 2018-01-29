@@ -20,7 +20,7 @@ const Login = ({ onLogin }) => (
       </div>
       <div className="login-box__email-row">
         <LoginForm onSubmit={onLogin} className="login-form" />
-        <Link to={EMAIL_SIGNUP}> Sign up with email address </Link>
+        <Link to={EMAIL_SIGNUP}>Sign up with email address</Link>
       </div>
     </LoginBox>
   </div>

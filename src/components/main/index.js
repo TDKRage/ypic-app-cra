@@ -1,16 +1,23 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Component from './component';
 import { signInCheck } from '../../reducers/api/login/actions';
+import { toggleAppDrawer } from '../../reducers/app-drawer/actions';
 import { LOGIN, HOME } from '../../urls';
 
 const handleOnLoad = dispatch => () => {
   dispatch(signInCheck(LOGIN, HOME));
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapStateToProps = ({ api }, ownProps) => ({
   ...ownProps,
-  onLoad: handleOnLoad(dispatch),
+  user: api.login.user,
 });
 
-export default connect(undefined, mapDispatchToProps)(Component);
+const mapDispatchToProps = dispatch => ({
+  onLoad: handleOnLoad(dispatch),
+  toggleDrawer: () => dispatch(toggleAppDrawer()),
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Component));
 

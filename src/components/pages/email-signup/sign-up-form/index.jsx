@@ -8,6 +8,7 @@ import InputField from '../../../shared/input-field';
 
 import { email, minLength, required, passwordRule, confirmPassword } from '../../../../utils/validatation';
 import { signUpFrom } from '../../../../utils/formNames';
+import { LOGIN } from '../../../../urls';
 
 import './index.css';
 
@@ -35,7 +36,7 @@ const SignUpForm = ({ handleSubmit, className }) => (
       validate={[required, confirmPassword]}
     />
     <div className="signup-form__button-bar">
-      <Link to="/"><Button raised type="button">Cancel</Button></Link>
+      <Link to={LOGIN}><Button raised type="button">Cancel</Button></Link>
       <Button raised primary type="submit">Sign In</Button>
     </div>
   </form>
