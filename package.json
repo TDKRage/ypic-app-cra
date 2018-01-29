@@ -6,6 +6,7 @@
     "history": "^4.7.2",
     "lifecycler": "^0.1.2",
     "normalize.css": "^7.0.0",
+    "payload-action-creator": "0.0.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
