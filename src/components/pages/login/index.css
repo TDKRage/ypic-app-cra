@@ -35,9 +35,12 @@
   justify-content: space-around;
 }
 
+.login-box__social-row.button {
+  color: white;
+}
+
 button.social-button--facebook {
   background-color: #3c5a9a;
-  color: white;
 }
 
 button.social-button--twitter {

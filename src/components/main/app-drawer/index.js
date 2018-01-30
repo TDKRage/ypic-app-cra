@@ -6,6 +6,7 @@ import { LOGIN } from '../../../urls';
 
 const handleSignOut = dispatch => () => {
   dispatch(signOutUser(LOGIN));
+  dispatch(toggleAppDrawer());
 };
 
 const mapStateToProps = ({ appDrawer }, ownProps) => ({
