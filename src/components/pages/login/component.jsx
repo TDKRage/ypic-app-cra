@@ -14,13 +14,13 @@ import LoginForm from './login-form';
 
 import './index.css';
 
-const Login = ({ onLogin }) => (
+const Login = ({ onLogin, onGoogleSignIn }) => (
   <div className="login-page">
     <LoginBox headerTitle="Please sign in.">
       <div className="login-box__social-row">
         <Button icon={<FacebookIcon />} inverse className="social-button--facebook">Facebook</Button>
         <Button icon={<TwitterIcon />} inverse className="social-button--twitter">Twitter</Button>
-        <Button icon={<GooglePlusIcon />} inverse className="social-button--google">Google</Button>
+        <Button onClick={onGoogleSignIn} icon={<GooglePlusIcon />} inverse className="social-button--google">Google</Button>
       </div>
       <div className="login-box__email-row">
         <LoginForm onSubmit={onLogin} className="login-form" />

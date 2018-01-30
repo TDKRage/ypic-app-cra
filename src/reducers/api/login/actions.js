@@ -22,6 +22,17 @@ export const loginUserEmailAsync = ({ email, password }) => async (dispatch) => 
   }
 };
 
+export const loginUserGoogleAsync = () => async (dispatch) => {
+  try {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const loginResult = await firebase.auth().signInWithPopup(provider);
+    console.log(loginResult);
+    dispatch(push(HOME));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const signOutUser = loginRoute => (dispatch) => {
   firebase.auth().signOut();
   dispatch(logout());
@@ -30,13 +41,10 @@ export const signOutUser = loginRoute => (dispatch) => {
 
 export const signInCheck = (loginRoute, homeRoute) => (dispatch) => {
   firebase.auth().onAuthStateChanged((user) => {
-    console.log('Im going here!');
     if (user) {
       dispatch(setUser(user));
       dispatch(push(homeRoute));
-      console.log('YIP YIP');
     } else {
-      console.log('INCORRECT!');
       dispatch(push(loginRoute));
     }
   });
