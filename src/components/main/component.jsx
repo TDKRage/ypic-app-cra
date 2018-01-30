@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Lifecycler from 'lifecycler';
 
 import AppBar from 'react-toolbox/lib/app_bar/AppBar';
+import PrivateRoute from '../shared/private-route';
 
 import { HOME, LOGIN, EMAIL_SIGNUP } from '../../urls';
 
@@ -20,7 +21,7 @@ const Main = ({ onLoad, user, toggleDrawer }) => (
     <AppDrawer />
     <div className="site-main__body">
       <Switch>
-        <Route path={HOME} component={Home} exact />
+        <PrivateRoute isAuthenticated={user} path={HOME} component={Home} exact />
         <Route path={EMAIL_SIGNUP} component={EmailSignUp} />
         <Route path={LOGIN} component={Login} />
       </Switch>
