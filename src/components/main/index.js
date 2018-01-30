@@ -17,6 +17,7 @@ const mapStateToProps = ({ api }, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   onLoad: handleOnLoad(dispatch),
   toggleDrawer: () => dispatch(toggleAppDrawer()),
+  onRefresh: () => window.location.reload(true),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Component));

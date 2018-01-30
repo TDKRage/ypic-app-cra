@@ -16,9 +16,9 @@ import EmailSignUp from '../pages/email-signup';
 
 import './index.css';
 
-const Main = ({ onLoad, user, toggleDrawer }) => (
+const Main = ({ onLoad, user, toggleDrawer, onRefresh }) => (
   <Lifecycler componentDidMount={onLoad} className="site-main">
-    <AppBar title="Young People in Christ" leftIcon={user ? 'menu' : null} onLeftIconClick={toggleDrawer}/>
+    <AppBar title="Young People in Christ" leftIcon={user ? 'menu' : null} onLeftIconClick={toggleDrawer} rightIcon="refresh" onRightIconClick={onRefresh}/>
     <AppDrawer />
     <div className="site-main__body">
       <Switch>
@@ -37,6 +37,7 @@ Main.defaultProps = {
 
 Main.propTypes = {
   onLoad: PropTypes.func.isRequired,
+  onRefresh: PropTypes.func.isRequired,
   toggleDrawer: PropTypes.func.isRequired,
   user: PropTypes.shape(),
 };
