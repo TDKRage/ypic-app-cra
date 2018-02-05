@@ -6,13 +6,14 @@ import Lifecycler from 'lifecycler';
 import AppBar from 'react-toolbox/lib/app_bar/AppBar';
 import PrivateRoute from '../shared/private-route';
 
-import { HOME, LOGIN, EMAIL_SIGNUP, DOWNLOADS } from '../../urls';
+import { HOME, LOGIN, EMAIL_SIGNUP, DOWNLOADS, PDF } from '../../urls';
 
 import AppDrawer from './app-drawer';
 import Home from '../pages/home';
 import Downloads from '../pages/downloads';
 import Login from '../pages/login';
 import EmailSignUp from '../pages/email-signup';
+import PDFPage from '../pages/pdf-page';
 
 import './index.css';
 
@@ -26,6 +27,7 @@ const Main = ({ onLoad, user, toggleDrawer, onRefresh }) => (
         <PrivateRoute isAuthenticated={user} path={DOWNLOADS} component={Downloads} exact />
         <Route path={EMAIL_SIGNUP} component={EmailSignUp} />
         <Route path={LOGIN} component={Login} />
+        <Route path={PDF()} component={PDFPage} />
       </Switch>
     </div>
   </Lifecycler>

@@ -4,8 +4,8 @@ import List from 'react-toolbox/lib/list/List';
 import ListItem from 'react-toolbox/lib/list/ListItem';
 import PDFViewer from '../../shared/pdf-viewer';
 
-import ThemeSongPdf from '../../../assets/pdfs/hymns/themesong.pdf';
-import AfterServicePdf from '../../../assets/pdfs/hymns/afterservice.pdf';
+import ThemeSongPdf from '../../../assets/pdfs/hymns/theme_song.pdf';
+import AfterServicePdf from '../../../assets/pdfs/hymns/after_service.pdf';
 
 const Downloads = () => (
   <div className="downloads-page">

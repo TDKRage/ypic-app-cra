@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Document, Page } from 'react-pdf/build/entry.webpack';
 import throttle from 'lodash.throttle';
-
 
 export default class PDFViewer extends Component {
   constructor(props) {
@@ -21,12 +21,10 @@ export default class PDFViewer extends Component {
   }
 
   onDocumentLoaded = ({ numPages }) => {
-    console.log(numPages);
     this.setState({ pages: Array.from(new Array(numPages), (val, index) => index + 1) });
   }
 
   setDivSize = () => {
-    console.log(window.innerWidth);
     this.setState({ width: window.innerWidth });
   }
 
@@ -40,3 +38,7 @@ export default class PDFViewer extends Component {
     );
   }
 }
+
+PDFViewer.propTypes = {
+  file: PropTypes.string.isRequired,
+};
