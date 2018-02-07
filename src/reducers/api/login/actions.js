@@ -25,8 +25,8 @@ export const loginUserEmailAsync = ({ email, password }) => async (dispatch) => 
 export const loginUserGoogleAsync = () => async (dispatch) => {
   try {
     const provider = new firebase.auth.GoogleAuthProvider();
-    const loginResult = await firebase.auth().signInWithPopup(provider);
-    console.log(loginResult);
+    const result = await firebase.auth().signInWithPopup(provider);
+    console.log('Login', result);
     dispatch(push(HOME));
   } catch (error) {
     console.log(error);
