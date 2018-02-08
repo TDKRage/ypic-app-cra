@@ -11,6 +11,7 @@ export default class PDFViewer extends Component {
       pages: [],
     };
   }
+
   componentDidMount() {
     this.setDivSize();
     window.addEventListener('resize', throttle(this.setDivSize, 500));

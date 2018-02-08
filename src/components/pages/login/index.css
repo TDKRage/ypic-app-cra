@@ -55,6 +55,11 @@ button.social-button--google {
   text-align: center;
 }
 
+.login-box__or-row {
+  padding-top: 14px;
+  text-align: center;
+}
+
 .login-form {
   padding-bottom: 1rem;
 }

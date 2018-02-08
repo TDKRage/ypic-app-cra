@@ -4,11 +4,13 @@ import { Route, Switch } from 'react-router-dom';
 import Lifecycler from 'lifecycler';
 
 import AppBar from 'react-toolbox/lib/app_bar/AppBar';
+import Snackbar from 'react-toolbox/lib/snackbar/Snackbar';
 import PrivateRoute from '../shared/private-route';
 
 import { HOME, LOGIN, EMAIL_SIGNUP, DOWNLOADS, PDF } from '../../urls';
 
 import AppDrawer from './app-drawer';
+import LoadingOverlay from './loading-overlay';
 import Home from '../pages/home';
 import Downloads from '../pages/downloads';
 import Login from '../pages/login';
@@ -17,7 +19,16 @@ import PDFPage from '../pages/pdf-page';
 
 import './index.css';
 
-const Main = ({ onLoad, user, toggleDrawer, onRefresh }) => (
+const Main = ({ 
+  onLoad, 
+  user, 
+  toggleDrawer, 
+  onRefresh,
+  snackActive,
+  snackLabel,
+  snackType, 
+  onSnackClose,
+}) => (
   <Lifecycler componentDidMount={onLoad} className="site-main">
     <AppBar title="Young People in Christ" leftIcon={user ? 'menu' : null} onLeftIconClick={toggleDrawer} rightIcon="refresh" onRightIconClick={onRefresh}/>
     <AppDrawer />
@@ -30,6 +41,16 @@ const Main = ({ onLoad, user, toggleDrawer, onRefresh }) => (
         <Route path={PDF()} component={PDFPage} />
       </Switch>
     </div>
+    <LoadingOverlay />
+    <Snackbar 
+      action="Dismiss"
+      active={snackActive}
+      label={snackLabel}
+      timeout={2000}
+      onClick={onSnackClose}
+      onTimeout={onSnackClose}
+      type={snackType}
+    />
   </Lifecycler>
 );
 
