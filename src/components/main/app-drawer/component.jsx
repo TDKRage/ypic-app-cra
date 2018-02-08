@@ -25,7 +25,7 @@ const AppDrawer = ({
   <Drawer active={active} onOverlayClick={toggleDrawer}>
     <List selectable ripple>
       <NavLink className="clean-text" activeClassName="active-link" exact to={HOME}><ListItem leftIcon="home" caption="Home" /></NavLink>
-      <NavLink className="clean-text" activeClassName="active-link" to={PDF('ypic_cg_2018')}><ListItem leftIcon={<BookIcon />} legend="YPiC Care Guide" /></NavLink>
+      <NavLink className="clean-text" activeClassName="active-link" to={PDF('ypic_cg_2018')}><ListItem leftIcon={<BookIcon />} caption="YPiC Care Guide" /></NavLink>
       <Collapsible open={ypcMusicOpen} handleTriggerClick={onYPCMusicClick} trigger={<ListItem leftIcon="list" caption="YPC2018 Music Program" />}>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('before_service1')}><ListItem leftIcon={<MusicIcon />} legend="127 - Give me joy in my heart" caption="Before Service 1" /></NavLink>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('before_service2')}><ListItem leftIcon={<MusicIcon />} legend="362 - A miracle of love" caption="Before Service 2" /></NavLink>
