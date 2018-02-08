@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import component from './component';
-import PDFS from '../../../assets/pdfs/hymns';
+import PDFS from '../../../assets/pdfs';
 
 const loadPDFFile = file => PDFS[file];
 

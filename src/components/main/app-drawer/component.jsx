@@ -5,6 +5,7 @@ import Collapsible from 'react-collapsible';
 
 import SignOutIcon from 'react-icons/lib/fa/sign-out';
 import MusicIcon from 'react-icons/lib/fa/music';
+import BookIcon from 'react-icons/lib/fa/book';
 import Drawer from 'react-toolbox/lib/drawer/Drawer';
 import List from 'react-toolbox/lib/list/List';
 import ListDivider from 'react-toolbox/lib/list/ListDivider';
@@ -14,11 +15,18 @@ import { PDF, HOME } from '../../../urls';
 
 import './index.css';
 
-const AppDrawer = ({ active, toggleDrawer, onSignOut }) => (
+const AppDrawer = ({
+  active,
+  toggleDrawer,
+  ypcMusicOpen,
+  onSignOut,
+  onYPCMusicClick,
+}) => (
   <Drawer active={active} onOverlayClick={toggleDrawer}>
     <List selectable ripple>
       <NavLink className="clean-text" activeClassName="active-link" exact to={HOME}><ListItem leftIcon="home" caption="Home" /></NavLink>
-      <Collapsible trigger={<ListItem leftIcon="list" caption="YPC2018 Music Program" />}>
+      <NavLink className="clean-text" activeClassName="active-link" to={PDF('ypic_cg_2018')}><ListItem leftIcon={<BookIcon />} legend="YPiC Care Guide" /></NavLink>
+      <Collapsible open={ypcMusicOpen} handleTriggerClick={onYPCMusicClick} trigger={<ListItem leftIcon="list" caption="YPC2018 Music Program" />}>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('before_service1')}><ListItem leftIcon={<MusicIcon />} legend="127 - Give me joy in my heart" caption="Before Service 1" /></NavLink>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('before_service2')}><ListItem leftIcon={<MusicIcon />} legend="362 - A miracle of love" caption="Before Service 2" /></NavLink>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('before_service3')}><ListItem leftIcon={<MusicIcon />} legend="21 - O God beyond all praising" caption="Before Service 3" /></NavLink>
@@ -43,6 +51,7 @@ AppDrawer.propTypes = {
   active: PropTypes.bool.isRequired,
   toggleDrawer: PropTypes.func.isRequired,
   onSignOut: PropTypes.func.isRequired,
+  ypcMusicOpen: PropTypes.bool.isRequired,
 };
 
 export default AppDrawer;
