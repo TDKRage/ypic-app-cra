@@ -51,6 +51,7 @@ AppDrawer.propTypes = {
   active: PropTypes.bool.isRequired,
   toggleDrawer: PropTypes.func.isRequired,
   onSignOut: PropTypes.func.isRequired,
+  onYPCMusicClick: PropTypes.func.isRequired,
   ypcMusicOpen: PropTypes.bool.isRequired,
 };
 

@@ -6,6 +6,7 @@ import Button from 'react-toolbox/lib/button/Button';
 import InputField from '../../../shared/input-field';
 
 import { loginForm } from '../../../../utils/formNames';
+import { trim } from '../../../../utils/field-normalize';
 import { email, required } from '../../../../utils/validatation';
 
 const LoginForm = ({ handleSubmit, className }) => (
@@ -16,6 +17,7 @@ const LoginForm = ({ handleSubmit, className }) => (
       label="Email"
       component={InputField}
       validate={[email, required]}
+      normalize={trim}
     />
     <Field
       type="password"

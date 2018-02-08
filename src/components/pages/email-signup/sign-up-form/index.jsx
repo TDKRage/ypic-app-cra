@@ -7,6 +7,7 @@ import Button from 'react-toolbox/lib/button/Button';
 import InputField from '../../../shared/input-field';
 
 import { email, minLength, required, passwordRule, confirmPassword } from '../../../../utils/validatation';
+import { trim } from '../../../../utils/field-normalize';
 import { signUpFrom } from '../../../../utils/formNames';
 import { LOGIN } from '../../../../urls';
 
@@ -20,6 +21,7 @@ const SignUpForm = ({ handleSubmit, className }) => (
       label="Email"
       component={InputField}
       validate={[required, email]}
+      normalize={trim}
     />
     <Field
       type="password"
