@@ -1,0 +1,20 @@
+.masked-password-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.masked-password-input {
+  flex-basis: 90%;
+
+}
+
+.masked-password-eye {
+}
+
+.masked-password-icon {
+  padding: 10px 10px;
+}
+
+.masked-password-icon:hover {
+  cursor: pointer;
+}

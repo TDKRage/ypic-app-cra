@@ -50,7 +50,7 @@
       "INPUT",
       "CHECKBOX",
       "DRAWER",
-      "LIST", 
+      "LIST",
       "SNACKBAR"
     ],
     "customProperties": {
