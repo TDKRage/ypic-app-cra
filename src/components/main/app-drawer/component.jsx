@@ -6,6 +6,8 @@ import Collapsible from 'react-collapsible';
 import SignOutIcon from 'react-icons/lib/fa/sign-out';
 import MusicIcon from 'react-icons/lib/fa/music';
 import BookIcon from 'react-icons/lib/fa/book';
+import AngleDownIcon from 'react-icons/lib/fa/angle-down';
+import AngleRightIcon from 'react-icons/lib/fa/angle-right';
 import Drawer from 'react-toolbox/lib/drawer/Drawer';
 import List from 'react-toolbox/lib/list/List';
 import ListDivider from 'react-toolbox/lib/list/ListDivider';
@@ -26,7 +28,15 @@ const AppDrawer = ({
     <List selectable ripple>
       <NavLink className="clean-text" activeClassName="active-link" exact to={HOME}><ListItem leftIcon="home" caption="Home" /></NavLink>
       <NavLink className="clean-text" activeClassName="active-link" to={PDF('ypic_cg_2018')}><ListItem leftIcon={<BookIcon />} caption="YPiC Care Guide" /></NavLink>
-      <Collapsible open={ypcMusicOpen} handleTriggerClick={onYPCMusicClick} trigger={<ListItem leftIcon="list" caption="YPC18218 Music" />}>
+      <Collapsible
+        open={ypcMusicOpen}
+        handleTriggerClick={onYPCMusicClick}
+        trigger={<ListItem
+          leftIcon="list"
+          caption="YPC18218 Music"
+          rightIcon={ypcMusicOpen ? <AngleDownIcon /> : <AngleRightIcon />}
+        />}
+      >
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('before_service1')}><ListItem leftIcon={<MusicIcon />} legend="127 - Give me joy in my heart" caption="Before Service 1" /></NavLink>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('before_service2')}><ListItem leftIcon={<MusicIcon />} legend="362 - A miracle of love" caption="Before Service 2" /></NavLink>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('before_service3')}><ListItem leftIcon={<MusicIcon />} legend="21 - O God beyond all praising" caption="Before Service 3" /></NavLink>
