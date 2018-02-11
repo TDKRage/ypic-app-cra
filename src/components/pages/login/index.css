@@ -67,3 +67,7 @@ button.social-button--google {
 .login-form__button-row {
   padding-top: 1rem;
 }
+
+.forgot-password-link { 
+  margin: 20px 0 10px 0;
+}

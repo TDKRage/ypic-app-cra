@@ -1,2 +1,3 @@
 export const loginForm = 'login';
-export const signUpFrom = 'signup';
+export const signUpForm = 'signup';
+export const forgotPasswordForm = 'forgot-password';

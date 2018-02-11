@@ -6,14 +6,14 @@ import { Field, reduxForm } from 'redux-form';
 import Button from 'react-toolbox/lib/button/Button';
 import InputField from '../../../shared/input-field';
 
-import { email, minLength, required, passwordRule, confirmPassword } from '../../../../utils/validatation';
+import { email, required } from '../../../../utils/validatation';
 import { trim } from '../../../../utils/field-normalize';
-import { signUpForm } from '../../../../utils/formNames';
+import { forgotPasswordForm } from '../../../../utils/formNames';
 import { LOGIN } from '../../../../urls';
 
 import './index.css';
 
-const SignUpForm = ({ handleSubmit, className }) => (
+const ForgotPasswordForm = ({ handleSubmit, className }) => (
   <form onSubmit={handleSubmit} className={className}>
     <Field
       type="text"
@@ -23,34 +23,20 @@ const SignUpForm = ({ handleSubmit, className }) => (
       validate={[required, email]}
       normalize={trim}
     />
-    <Field
-      type="password"
-      name="password"
-      label="Password"
-      component={InputField}
-      validate={[required, minLength(8), passwordRule]}
-    />
-    <Field
-      type="password"
-      name="confirmPassword"
-      label="Confirm Password"
-      component={InputField}
-      validate={[required, confirmPassword]}
-    />
     <div className="signup-form__button-bar">
-      <Link to={LOGIN}><Button raised type="button">Cancel</Button></Link>
+      <Link to={LOGIN}><Button raised type="button">Back</Button></Link>
       <Button raised primary type="submit">Sign In</Button>
     </div>
   </form>
 );
 
-SignUpForm.defaultProps = {
+ForgotPasswordForm.defaultProps = {
   className: '',
 };
 
-SignUpForm.propTypes = {
+ForgotPasswordForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   className: PropTypes.string,
 };
 
-export default reduxForm({ form: signUpForm })(SignUpForm);
+export default reduxForm({ form: forgotPasswordForm })(ForgotPasswordForm);
