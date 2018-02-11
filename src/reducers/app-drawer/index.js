@@ -3,7 +3,7 @@ import { TOGGLE_APP_DRAWER, TOGGLE_YPC_MUSIC } from './actions';
 
 const initialState = {
   active: false,
-  ypcMusicOpen: true,
+  ypcMusicOpen: false,
 };
 
 export default (state = initialState, action = {}) => {
