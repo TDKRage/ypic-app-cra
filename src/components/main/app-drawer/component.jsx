@@ -13,7 +13,7 @@ import List from 'react-toolbox/lib/list/List';
 import ListDivider from 'react-toolbox/lib/list/ListDivider';
 import ListItem from 'react-toolbox/lib/list/ListItem';
 
-import { PDF, HOME } from '../../../urls';
+import { PDF, HOME, REFERRALS } from '../../../urls';
 
 import './index.css';
 
@@ -51,6 +51,7 @@ const AppDrawer = ({
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('after_service')}><ListItem leftIcon={<MusicIcon />} legend="We will keep our faith alive" caption="After Service" /></NavLink>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('theme_song')}><ListItem leftIcon={<MusicIcon />} legend="In Christ we live and move" caption="Theme Song" /></NavLink>
       </Collapsible>
+      <NavLink className="clean-text" activeClassName="active-link" exact to={REFERRALS}><ListItem leftIcon="phone" caption="Referrals" /></NavLink>
       <ListDivider />
       <ListItem value="signout" leftIcon={<SignOutIcon />} onClick={onSignOut} caption="Sign Out" />
     </List>

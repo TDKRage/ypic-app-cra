@@ -7,7 +7,15 @@ import AppBar from 'react-toolbox/lib/app_bar/AppBar';
 import Snackbar from 'react-toolbox/lib/snackbar/Snackbar';
 import PrivateRoute from '../shared/private-route';
 
-import { HOME, LOGIN, EMAIL_SIGNUP, FORGOT_PASSWORD, DOWNLOADS, PDF } from '../../urls';
+import {
+  HOME,
+  LOGIN,
+  EMAIL_SIGNUP,
+  FORGOT_PASSWORD,
+  DOWNLOADS,
+  PDF,
+  REFERRALS,
+} from '../../urls';
 
 import AppDrawer from './app-drawer';
 import LoadingOverlay from './loading-overlay';
@@ -17,6 +25,7 @@ import Login from '../pages/login';
 import EmailSignUp from '../pages/email-signup';
 import PDFPage from '../pages/pdf-page';
 import ForgotPassword from '../pages/forgot-password';
+import Referrals from '../pages/referrals';
 
 import './index.css';
 
@@ -37,6 +46,7 @@ const Main = ({
       <Switch>
         <PrivateRoute isAuthenticated={user} path={HOME} component={Home} exact />
         <PrivateRoute isAuthenticated={user} path={DOWNLOADS} component={Downloads} exact />
+        <PrivateRoute isAuthenticated={user} path={REFERRALS} component={Referrals} exact />
         <Route path={EMAIL_SIGNUP} component={EmailSignUp} />
         <Route path={FORGOT_PASSWORD} component={ForgotPassword} />
         <Route path={LOGIN} component={Login} />

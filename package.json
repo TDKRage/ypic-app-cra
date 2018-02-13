@@ -48,6 +48,7 @@
       "BUTTON",
       "APP_BAR",
       "INPUT",
+      "CARD",
       "CHECKBOX",
       "DRAWER",
       "LIST",
