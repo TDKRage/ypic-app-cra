@@ -3,6 +3,7 @@
 # firebase
 **/.firebaserc
 public/secrets.js
+public/secrets-dev.js
 
 # dependencies
 **/node_modules/*

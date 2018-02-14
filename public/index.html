@@ -40,14 +40,7 @@
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script>
       // Initialize Firebase
-      var config = {
-          apiKey: window.apiKey,
-          authDomain: "ypic-app-alpha-a8f83.firebaseapp.com",
-          databaseURL: "https://ypic-app-alpha-a8f83.firebaseio.com",
-          projectId: "ypic-app-alpha-a8f83",
-          storageBucket: "ypic-app-alpha-a8f83.appspot.com",
-          messagingSenderId: window.messagingSenderId
-      };
+      var config = window.firebaseConfig;
       firebase.initializeApp(config);
       window.firebase = firebase;
     </script>
