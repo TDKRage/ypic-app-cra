@@ -17,7 +17,7 @@ const Upcoming = () => (
     </div>
     <div className="upcoming-page__inqueries">
       <span>
-       If you are interested in assisting with the development of the App please email your details to <a href="mailto:nacssayouthcommittee@gmail.com">nacssayouthcommittee@gmail.com</a>
+       If you are interested in assisting with the development of the App please email your details to <a href="mailto:nacsayouthcommittee@gmail.com">nacsayouthcommittee@gmail.com</a>
       </span>
     </div>
     <div className="upcoming-page__dragonboat-container">

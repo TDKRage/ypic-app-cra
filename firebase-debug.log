@@ -1,0 +1,26 @@
+[debug] [2018-02-15T20:18:01.123Z] ----------------------------------------------------------------------
+[debug] [2018-02-15T20:18:01.126Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\TDK_Rage\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy --only hosting
+[debug] [2018-02-15T20:18:01.126Z] CLI Version:   3.17.4
+[debug] [2018-02-15T20:18:01.126Z] Platform:      win32
+[debug] [2018-02-15T20:18:01.126Z] Node Version:  v8.9.2
+[debug] [2018-02-15T20:18:01.126Z] Time:          Thu Feb 15 2018 22:18:01 GMT+0200 (South Africa Standard Time)
+[debug] [2018-02-15T20:18:01.127Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-15T20:18:01.137Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-15T20:18:01.137Z] > authorizing via signed-in user
+[debug] [2018-02-15T20:18:01.139Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ypic-app  
+  
+ Thu Feb 15 2018 22:18:01 GMT+0200 (South Africa Standard Time)
+[debug] [2018-02-15T20:18:03.853Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-15T20:18:03.853Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ypic-app/tokens  
+  
+ Thu Feb 15 2018 22:18:03 GMT+0200 (South Africa Standard Time)
+[debug] [2018-02-15T20:18:04.988Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ypic-app'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing build directory for upload...
+[debug] [2018-02-15T20:18:07.824Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/ypic-app/uploads/-L5Q6TlaHp2UfvgZY-Tu?fileCount=54&message=  
+  
+ Thu Feb 15 2018 22:18:07 GMT+0200 (South Africa Standard Time)
