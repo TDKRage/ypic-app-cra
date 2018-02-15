@@ -30,7 +30,7 @@ const Referrals = () => (
         subtitle="South African Depression and Anxiety Group"
         title="Suicide"
       />
-      <CardText className="referrals-card-text"><a href="tel:0800567567">0800 567 567</a> / <a href="tel:31393">31393 (free sms)</a></CardText>
+      <CardText className="referrals-card-text"><a href="tel:0800567567">0800 567 567</a> / <a href="tel:31393">31393</a>(free sms)</CardText>
     </Card>
     <Card className="referrals-card">
       <CardTitle
@@ -46,7 +46,7 @@ const Referrals = () => (
         subtitle="South African Depression and Anxiety Group"
         title="Cyber Bullying"
       />
-      <CardText className="referrals-card-text"><a href="tel:0800212223">0800 21 22 23 (Dr Reddy)</a></CardText>
+      <CardText className="referrals-card-text"><a href="tel:0800212223">0800 21 22 23</a>(Dr Reddy)</CardText>
     </Card>
     <Card className="referrals-card">
       <CardTitle
@@ -54,7 +54,7 @@ const Referrals = () => (
         subtitle="Tears Foundation"
         title="Sexual Abuse / Rape Crisis"
       />
-      <CardText className="referrals-card-text"><a href="tel:0105905920">010 590 5920</a> / <a href="tel:*134*7355">*134*7355 (free)</a></CardText>
+      <CardText className="referrals-card-text"><a href="tel:0105905920">010 590 5920</a> / <a href="tel:*134*7355">*134*7355</a>(free)</CardText>
     </Card>
     <Card className="referrals-card">
       <CardTitle
@@ -77,7 +77,7 @@ const Referrals = () => (
         subtitle="South African Responsible Gambling Foundation"
         title="Gambling"
       />
-      <CardText className="referrals-card-text"><a href="tel:0800212223">0800 21 22 23 (Dr Reddy)</a></CardText>
+      <CardText className="referrals-card-text"><a href="tel:>0800006008">0800 006 008</a></CardText>
     </Card>
     <Card className="referrals-card">
       <CardTitle
@@ -85,7 +85,7 @@ const Referrals = () => (
         subtitle="Al-Anon and Nar-Anon"
         title="Support groups for families of substance abuse users"
       />
-      <CardText className="referrals-card-text"><a href="tel:0861252666">0861 2526 66 (alcoholic)</a> / <a href="tel:0881296791">088 129 6791 (drugs)</a></CardText>
+      <CardText className="referrals-card-text"><a href="tel:0861252666">0861 2526 66</a>(alcoholic) / <a href="tel:0881296791">088 129 6791</a>(drugs)</CardText>
     </Card>
   </div>
 );
