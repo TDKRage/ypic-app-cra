@@ -1,11 +1,11 @@
-.upcomming-page {
+.upcoming-page {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 10px;
 }
 
-.upcomming-page__icon-img {
+.upcoming-page__icon-img {
   width: 24px;
   height: 24px;
   min-width: 24px;
@@ -13,7 +13,7 @@
   padding: 0 5px;
 }
 
-.upcomming-page__disclaimer {
+.upcoming-page__disclaimer {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -21,18 +21,18 @@
   text-align: center;
 }
 
-.upcomming-page__inqueries {
+.upcoming-page__inqueries {
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
-.upcomming-page__dragonboat-container {
+.upcoming-page__dragonboat-container {
   width: 50%;
   margin: 20px auto;
 }
 
-.upcomming-page__dragonboat {
+.upcoming-page__dragonboat {
   display: block;
   width: 100%;
   height: auto;
