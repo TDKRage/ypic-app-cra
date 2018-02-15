@@ -18,7 +18,7 @@ import {
   PDF,
   HOME,
   REFERRALS,
-  UPCOMMING,
+  UPCOMING,
 } from '../../../urls';
 
 import './index.css';
@@ -58,7 +58,7 @@ const AppDrawer = ({
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('after_service')}><ListItem leftIcon={<MusicIcon />} legend="We will keep our faith alive" caption="Exit Hymn" /></NavLink>
       </Collapsible>
       <NavLink className="clean-text" activeClassName="active-link" exact to={REFERRALS}><ListItem leftIcon="phone" caption="Referrals" /></NavLink>
-      <NavLink className="clean-text" activeClassName="active-link" exact to={UPCOMMING}><ListItem leftIcon={<NewReleasesIcon />} caption="Upcomming" /></NavLink>
+      <NavLink className="clean-text" activeClassName="active-link" exact to={UPCOMING}><ListItem leftIcon={<NewReleasesIcon />} caption="Upcoming" /></NavLink>
       <ListDivider />
       <ListItem value="signout" leftIcon={<SignOutIcon />} onClick={onSignOut} caption="Sign Out" />
     </List>
