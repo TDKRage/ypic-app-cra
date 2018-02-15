@@ -71,7 +71,6 @@ const Referrals = () => (
       />
       <CardText className="referrals-card-text"><a href="tel:0861322322">0861 322 322</a></CardText>
     </Card>
-
     <Card className="referrals-card">
       <CardTitle
         avatar={<Avatar title="South African Responsible Gambling Foundation" cover image={GamblingImg} />}

@@ -6,6 +6,7 @@ import Collapsible from 'react-collapsible';
 import SignOutIcon from 'react-icons/lib/fa/sign-out';
 import MusicIcon from 'react-icons/lib/fa/music';
 import BookIcon from 'react-icons/lib/fa/book';
+import NewReleasesIcon from 'react-icons/lib/md/new-releases';
 import AngleDownIcon from 'react-icons/lib/fa/angle-down';
 import AngleRightIcon from 'react-icons/lib/fa/angle-right';
 import Drawer from 'react-toolbox/lib/drawer/Drawer';
@@ -13,7 +14,12 @@ import List from 'react-toolbox/lib/list/List';
 import ListDivider from 'react-toolbox/lib/list/ListDivider';
 import ListItem from 'react-toolbox/lib/list/ListItem';
 
-import { PDF, HOME, REFERRALS } from '../../../urls';
+import {
+  PDF,
+  HOME,
+  REFERRALS,
+  UPCOMMING,
+} from '../../../urls';
 
 import './index.css';
 
@@ -48,10 +54,11 @@ const AppDrawer = ({
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('communion1')}><ListItem leftIcon={<MusicIcon />} legend="327  Jesus paid it all" caption="Communion 1" /></NavLink>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('communion2')}><ListItem leftIcon={<MusicIcon />} legend="318 - I hear Thy welcome voice " caption="Communion 2" /></NavLink>
         <NavLink className="clean-text" activeClassName="active-link" to={PDF('prep_departed')}><ListItem leftIcon={<MusicIcon />} legend="347 - Come, share the Lord" caption="Preparation Departed" /></NavLink>
-        <NavLink className="clean-text" activeClassName="active-link" to={PDF('after_service')}><ListItem leftIcon={<MusicIcon />} legend="We will keep our faith alive" caption="After Service" /></NavLink>
-        <NavLink className="clean-text" activeClassName="active-link" to={PDF('theme_song')}><ListItem leftIcon={<MusicIcon />} legend="In Christ we live and move" caption="Theme Song" /></NavLink>
+        <NavLink className="clean-text" activeClassName="active-link" to={PDF('theme_song')}><ListItem leftIcon={<MusicIcon />} legend="In Christ we live and move" caption="After Service" /></NavLink>
+        <NavLink className="clean-text" activeClassName="active-link" to={PDF('after_service')}><ListItem leftIcon={<MusicIcon />} legend="We will keep our faith alive" caption="Exit Hymn" /></NavLink>
       </Collapsible>
       <NavLink className="clean-text" activeClassName="active-link" exact to={REFERRALS}><ListItem leftIcon="phone" caption="Referrals" /></NavLink>
+      <NavLink className="clean-text" activeClassName="active-link" exact to={UPCOMMING}><ListItem leftIcon={<NewReleasesIcon />} caption="Upcomming" /></NavLink>
       <ListDivider />
       <ListItem value="signout" leftIcon={<SignOutIcon />} onClick={onSignOut} caption="Sign Out" />
     </List>

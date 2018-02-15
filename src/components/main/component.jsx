@@ -15,6 +15,7 @@ import {
   DOWNLOADS,
   PDF,
   REFERRALS,
+  UPCOMMING,
 } from '../../urls';
 
 import AppDrawer from './app-drawer';
@@ -26,6 +27,7 @@ import EmailSignUp from '../pages/email-signup';
 import PDFPage from '../pages/pdf-page';
 import ForgotPassword from '../pages/forgot-password';
 import Referrals from '../pages/referrals';
+import Upcomming from '../pages/upcomming';
 
 import './index.css';
 
@@ -47,6 +49,7 @@ const Main = ({
         <PrivateRoute isAuthenticated={user} path={HOME} component={Home} exact />
         <PrivateRoute isAuthenticated={user} path={DOWNLOADS} component={Downloads} exact />
         <PrivateRoute isAuthenticated={user} path={REFERRALS} component={Referrals} exact />
+        <PrivateRoute isAuthenticated={user} path={UPCOMMING} component={Upcomming} exact />
         <Route path={EMAIL_SIGNUP} component={EmailSignUp} />
         <Route path={FORGOT_PASSWORD} component={ForgotPassword} />
         <Route path={LOGIN} component={Login} />
